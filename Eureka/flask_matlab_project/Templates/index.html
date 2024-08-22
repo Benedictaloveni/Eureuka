@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask MATLAB Integration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Flask MATLAB Kalkulator dan Turtuositas</h1>
+        
+        <!-- Form untuk kalkulator MATLAB -->
+        <form id="user-form">
+            <div class="input-group">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="age">Usia:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="input-group">
+                <label for="num1">Angka 1:</label>
+                <input type="number" id="num1" name="num1" required>
+            </div>
+            <div class="input-group">
+                <label for="num2">Angka 2:</label>
+                <input type="number" id="num2" name="num2" required>
+            </div>
+            <button type="button" id="run-matlab">Hitung MATLAB</button>
+        </form>
+        
+        <!-- Form untuk menghitung turtuositas -->
+        <form id="image-form">
+            <div class="input-group">
+                <label for="image">Pilih Gambar:</label>
+                <input type="file" id="image" name="image" accept=".bmp" required>
+            </div>
+            <button type="button" id="calculate-turtuositas">Hitung Turtuositas</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="turtuositas"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
